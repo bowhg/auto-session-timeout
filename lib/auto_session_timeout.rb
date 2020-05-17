@@ -25,7 +25,7 @@ module AutoSessionTimeout
   end
   
   def render_session_status(options={})
-    devise_model  = options[:devise_model]  || "admin"
+    devise_model  = options[:devise_model]  || "user"
     devise_model  = eval("current_#{devise_model}")     
     # clear etags to prevent caching
     response.headers["Etag"] = ""  
