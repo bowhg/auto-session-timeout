@@ -33,7 +33,7 @@ module AutoSessionTimeout
   end
   
   def render_session_timeout(options={})
-    path          = options[:path]          || "/admins/sign_in"
+    path          = options[:path]          || "/login"
     flash_name    = options[:flash_name]    || "notice"
     flash_message = options[:flash_message] || "Your session has timed out."
 
