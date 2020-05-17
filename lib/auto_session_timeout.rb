@@ -29,7 +29,7 @@ module AutoSessionTimeout
     devise_model  = eval("current_#{devise_model}")     
     # clear etags to prevent caching
     response.headers["Etag"] = ""  
-    render text: !!devise_model, status: 200
+    render plain: !!devise_model, status: 200
   end
   
   def render_session_timeout(options={})
