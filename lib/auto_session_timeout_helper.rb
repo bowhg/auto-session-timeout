@@ -4,7 +4,6 @@ module AutoSessionTimeoutHelper
     verbosity    = options[:verbosity]    || 2
     refresh_rate = options[:refresh_rate] || 60
     devise_model = options[:devise_model] || "user"
-    devise_model = eval("current_#{devise_model}")
 
     if devise_model.present?
       checker_js(frequency, verbosity)
